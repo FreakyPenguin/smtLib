@@ -64,6 +64,7 @@ data Option
   | OptRandomSeed Integer
   | OptVerbosity Integer
   | OptAttr Attr
+    deriving (Eq,Ord,Show)
 
 data InfoFlag
   = InfoAllStatistics
@@ -74,6 +75,7 @@ data InfoFlag
   | InfoStatus
   | InfoReasonUnknown
   | InfoAttr Attr
+    deriving (Eq,Ord,Show)
 
 data Command
   = CmdSetLogic Name
@@ -94,8 +96,10 @@ data Command
   | CmdGetInfo InfoFlag
   | CmdGetOption Name
   | CmdExit
+    deriving (Eq,Ord,Show)
 
 newtype Script = Script [Command]
+    deriving (Eq,Ord,Show)
 
 
 --------------------------------------------------------------------------------
